@@ -1,0 +1,17 @@
+[
+  'diffuse_front_strength': 'base',
+  'diffuse_roughness': 'diffuseRoughness',
+  'diffuse_front_color': 'baseColor',
+  'specular_strength_1': 'specular',
+  'specular_color_1': 'specularColor',
+  'specular_roughness_1': 'specularRoughness',
+  'specular_index_of_refraction_1': 'specularIOR',
+  'specular_anisotropy_1': 'specularAnisotropy',
+  'specular_anisotropy_rotation_1': 'specularRotation',
+  'transmission_strength': 'transmission',
+  'transmission_color': 'transmissionColor',
+  'transmission_index_of_refraction': 'specularIOR'
+  'transmission_roughness': 'transmissionExtraRoughness' + 'specularRoughness'
+  'emission_color': 'emissionColor',
+  'emission_strength': 'emission'
+]

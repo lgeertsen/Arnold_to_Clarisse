@@ -1,0 +1,29 @@
+[
+    {
+        "object_name": [
+            "pSphereShape1"
+        ], 
+        "normal_type": [], 
+        "data": [], 
+        "name": "CONCRETE", 
+        "disp_name": []
+    }, 
+    {
+        "object_name": [
+            "pSphereShape2"
+        ], 
+        "normal_type": [], 
+        "data": [], 
+        "name": "BRICK", 
+        "disp_name": []
+    }, 
+    {
+        "object_name": [
+            "pSphereShape3"
+        ], 
+        "normal_type": [], 
+        "data": [], 
+        "name": "METAL", 
+        "disp_name": []
+    }
+]

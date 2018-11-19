@@ -1,0 +1,21 @@
+[
+    {
+        "data": [
+            {
+                "transmission_color": [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            }, 
+            {
+                "emission_color": [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            }
+        ], 
+        "name": "CONCRETE"
+    }
+]

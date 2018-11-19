@@ -75,4 +75,4 @@ def read_mat_data(file_path=None, default_path="project://scene"):
                                                           [str(val)])
 
 
-read_mat_data(file_path='d:/test_mat.json', default_path="project://scene")
+read_mat_data(file_path='C:/Users/etudiant/Documents/clarisse_alshader_io/test_mat.json', default_path="project://scene")

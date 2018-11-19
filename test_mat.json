@@ -1,0 +1,5888 @@
+{
+    "connections": [
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.normalCamera", 
+            "from": "bump2d1", 
+            "fromAttribute": "bump2d1.outNormal"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.normalCameraX", 
+            "from": "bump2d1", 
+            "fromAttribute": "bump2d1.outNormal"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.normalCameraY", 
+            "from": "bump2d1", 
+            "fromAttribute": "bump2d1.outNormal"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.normalCameraZ", 
+            "from": "bump2d1", 
+            "fromAttribute": "bump2d1.outNormal"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.baseColor", 
+            "from": "remapColor1", 
+            "fromAttribute": "remapColor1.outColor"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.baseColorR", 
+            "from": "remapColor1", 
+            "fromAttribute": "remapColor1.outColor"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.baseColorG", 
+            "from": "remapColor1", 
+            "fromAttribute": "remapColor1.outColor"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.baseColorB", 
+            "from": "remapColor1", 
+            "fromAttribute": "remapColor1.outColor"
+        }, 
+        {
+            "to": "CONCRETE", 
+            "toAttribute": "CONCRETE.specularRoughness", 
+            "from": "reverse1", 
+            "fromAttribute": "reverse1.outputX"
+        }, 
+        {
+            "to": "remapColor1", 
+            "toAttribute": "remapColor1.color", 
+            "from": "file1", 
+            "fromAttribute": "file1.outColor"
+        }, 
+        {
+            "to": "remapColor1", 
+            "toAttribute": "remapColor1.colorR", 
+            "from": "file1", 
+            "fromAttribute": "file1.outColor"
+        }, 
+        {
+            "to": "remapColor1", 
+            "toAttribute": "remapColor1.colorG", 
+            "from": "file1", 
+            "fromAttribute": "file1.outColor"
+        }, 
+        {
+            "to": "remapColor1", 
+            "toAttribute": "remapColor1.colorB", 
+            "from": "file1", 
+            "fromAttribute": "file1.outColor"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.uvCoord", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.uCoord", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vCoord", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.uvFilterSize", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUvFilterSize"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.uvFilterSizeX", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUvFilterSize"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.uvFilterSizeY", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.outUvFilterSize"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.coverage", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.coverage"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.coverageU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.coverage"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.coverageV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.coverage"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.translateFrame", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.translateFrame"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.translateFrameU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.translateFrame"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.translateFrameV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.translateFrame"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.rotateFrame", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.rotateFrame"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.mirrorU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.mirrorU"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.mirrorV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.mirrorV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.stagger", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.stagger"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.wrapU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.wrapU"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.wrapV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.wrapV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.repeatUV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.repeatUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.repeatU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.repeatUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.repeatV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.repeatUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.offset", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.offset"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.offsetU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.offset"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.offsetV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.offset"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.rotateUV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.rotateUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.noiseUV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.noiseUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.noiseU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.noiseUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.noiseV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.noiseUV"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexCameraOne", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexCameraOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexCameraOneX", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexCameraOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexCameraOneY", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexCameraOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexCameraOneZ", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexCameraOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvOne", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvOneU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvOneV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvOne"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvTwo", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvTwo"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvTwoU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvTwo"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvTwoV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvTwo"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvThree", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvThree"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvThreeU", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvThree"
+        }, 
+        {
+            "to": "file1", 
+            "toAttribute": "file1.vertexUvThreeV", 
+            "from": "place2dTexture1", 
+            "fromAttribute": "place2dTexture1.vertexUvThree"
+        }, 
+        {
+            "to": "reverse1", 
+            "toAttribute": "reverse1.inputX", 
+            "from": "file2", 
+            "fromAttribute": "file2.outAlpha"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.uvCoord", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.uCoord", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vCoord", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.uvFilterSize", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUvFilterSize"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.uvFilterSizeX", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUvFilterSize"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.uvFilterSizeY", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.outUvFilterSize"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.coverage", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.coverage"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.coverageU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.coverage"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.coverageV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.coverage"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.translateFrame", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.translateFrame"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.translateFrameU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.translateFrame"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.translateFrameV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.translateFrame"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.rotateFrame", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.rotateFrame"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.mirrorU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.mirrorU"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.mirrorV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.mirrorV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.stagger", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.stagger"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.wrapU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.wrapU"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.wrapV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.wrapV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.repeatUV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.repeatUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.repeatU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.repeatUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.repeatV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.repeatUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.offset", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.offset"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.offsetU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.offset"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.offsetV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.offset"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.rotateUV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.rotateUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.noiseUV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.noiseUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.noiseU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.noiseUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.noiseV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.noiseUV"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexCameraOne", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexCameraOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexCameraOneX", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexCameraOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexCameraOneY", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexCameraOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexCameraOneZ", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexCameraOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvOne", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvOneU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvOneV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvOne"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvTwo", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvTwo"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvTwoU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvTwo"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvTwoV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvTwo"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvThree", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvThree"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvThreeU", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvThree"
+        }, 
+        {
+            "to": "file2", 
+            "toAttribute": "file2.vertexUvThreeV", 
+            "from": "place2dTexture2", 
+            "fromAttribute": "place2dTexture2.vertexUvThree"
+        }, 
+        {
+            "to": "bump2d1", 
+            "toAttribute": "bump2d1.bumpValue", 
+            "from": "file3", 
+            "fromAttribute": "file3.outAlpha"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.uvCoord", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.uCoord", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vCoord", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.uvFilterSize", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUvFilterSize"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.uvFilterSizeX", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUvFilterSize"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.uvFilterSizeY", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.outUvFilterSize"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.coverage", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.coverage"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.coverageU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.coverage"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.coverageV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.coverage"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.translateFrame", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.translateFrame"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.translateFrameU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.translateFrame"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.translateFrameV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.translateFrame"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.rotateFrame", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.rotateFrame"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.mirrorU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.mirrorU"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.mirrorV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.mirrorV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.stagger", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.stagger"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.wrapU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.wrapU"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.wrapV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.wrapV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.repeatUV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.repeatUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.repeatU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.repeatUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.repeatV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.repeatUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.offset", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.offset"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.offsetU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.offset"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.offsetV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.offset"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.rotateUV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.rotateUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.noiseUV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.noiseUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.noiseU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.noiseUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.noiseV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.noiseUV"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexCameraOne", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexCameraOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexCameraOneX", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexCameraOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexCameraOneY", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexCameraOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexCameraOneZ", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexCameraOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvOne", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvOneU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvOneV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvOne"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvTwo", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvTwo"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvTwoU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvTwo"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvTwoV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvTwo"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvThree", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvThree"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvThreeU", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvThree"
+        }, 
+        {
+            "to": "file3", 
+            "toAttribute": "file3.vertexUvThreeV", 
+            "from": "place2dTexture3", 
+            "fromAttribute": "place2dTexture3.vertexUvThree"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.normalCamera", 
+            "from": "bump2d2", 
+            "fromAttribute": "bump2d2.outNormal"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.normalCameraX", 
+            "from": "bump2d2", 
+            "fromAttribute": "bump2d2.outNormal"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.normalCameraY", 
+            "from": "bump2d2", 
+            "fromAttribute": "bump2d2.outNormal"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.normalCameraZ", 
+            "from": "bump2d2", 
+            "fromAttribute": "bump2d2.outNormal"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.baseColor", 
+            "from": "file4", 
+            "fromAttribute": "file4.outColor"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.baseColorR", 
+            "from": "file4", 
+            "fromAttribute": "file4.outColor"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.baseColorG", 
+            "from": "file4", 
+            "fromAttribute": "file4.outColor"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.baseColorB", 
+            "from": "file4", 
+            "fromAttribute": "file4.outColor"
+        }, 
+        {
+            "to": "BRICK", 
+            "toAttribute": "BRICK.specularRoughness", 
+            "from": "reverse2", 
+            "fromAttribute": "reverse2.outputX"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.uvCoord", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.uCoord", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vCoord", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.uvFilterSize", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUvFilterSize"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.uvFilterSizeX", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUvFilterSize"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.uvFilterSizeY", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.outUvFilterSize"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.coverage", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.coverage"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.coverageU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.coverage"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.coverageV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.coverage"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.translateFrame", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.translateFrame"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.translateFrameU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.translateFrame"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.translateFrameV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.translateFrame"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.rotateFrame", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.rotateFrame"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.mirrorU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.mirrorU"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.mirrorV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.mirrorV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.stagger", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.stagger"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.wrapU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.wrapU"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.wrapV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.wrapV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.repeatUV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.repeatUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.repeatU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.repeatUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.repeatV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.repeatUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.offset", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.offset"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.offsetU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.offset"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.offsetV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.offset"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.rotateUV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.rotateUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.noiseUV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.noiseUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.noiseU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.noiseUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.noiseV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.noiseUV"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexCameraOne", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexCameraOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexCameraOneX", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexCameraOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexCameraOneY", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexCameraOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexCameraOneZ", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexCameraOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvOne", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvOneU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvOneV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvOne"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvTwo", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvTwo"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvTwoU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvTwo"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvTwoV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvTwo"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvThree", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvThree"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvThreeU", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvThree"
+        }, 
+        {
+            "to": "file4", 
+            "toAttribute": "file4.vertexUvThreeV", 
+            "from": "place2dTexture4", 
+            "fromAttribute": "place2dTexture4.vertexUvThree"
+        }, 
+        {
+            "to": "reverse2", 
+            "toAttribute": "reverse2.inputX", 
+            "from": "remapValue2", 
+            "fromAttribute": "remapValue2.outValue"
+        }, 
+        {
+            "to": "reverse2", 
+            "toAttribute": "reverse2.inputY", 
+            "from": "remapValue2", 
+            "fromAttribute": "remapValue2.outValue"
+        }, 
+        {
+            "to": "reverse2", 
+            "toAttribute": "reverse2.inputZ", 
+            "from": "remapValue2", 
+            "fromAttribute": "remapValue2.outValue"
+        }, 
+        {
+            "to": "remapValue2", 
+            "toAttribute": "remapValue2.inputValue", 
+            "from": "file5", 
+            "fromAttribute": "file5.outAlpha"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.uvCoord", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.uCoord", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vCoord", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.uvFilterSize", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUvFilterSize"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.uvFilterSizeX", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUvFilterSize"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.uvFilterSizeY", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.outUvFilterSize"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.coverage", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.coverage"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.coverageU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.coverage"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.coverageV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.coverage"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.translateFrame", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.translateFrame"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.translateFrameU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.translateFrame"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.translateFrameV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.translateFrame"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.rotateFrame", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.rotateFrame"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.mirrorU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.mirrorU"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.mirrorV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.mirrorV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.stagger", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.stagger"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.wrapU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.wrapU"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.wrapV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.wrapV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.repeatUV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.repeatUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.repeatU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.repeatUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.repeatV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.repeatUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.offset", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.offset"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.offsetU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.offset"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.offsetV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.offset"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.rotateUV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.rotateUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.noiseUV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.noiseUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.noiseU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.noiseUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.noiseV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.noiseUV"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexCameraOne", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexCameraOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexCameraOneX", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexCameraOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexCameraOneY", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexCameraOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexCameraOneZ", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexCameraOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvOne", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvOneU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvOneV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvOne"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvTwo", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvTwo"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvTwoU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvTwo"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvTwoV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvTwo"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvThree", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvThree"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvThreeU", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvThree"
+        }, 
+        {
+            "to": "file5", 
+            "toAttribute": "file5.vertexUvThreeV", 
+            "from": "place2dTexture5", 
+            "fromAttribute": "place2dTexture5.vertexUvThree"
+        }, 
+        {
+            "to": "bump2d2", 
+            "toAttribute": "bump2d2.bumpValue", 
+            "from": "file6", 
+            "fromAttribute": "file6.outAlpha"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.uvCoord", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.uCoord", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vCoord", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.uvFilterSize", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUvFilterSize"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.uvFilterSizeX", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUvFilterSize"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.uvFilterSizeY", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.outUvFilterSize"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.coverage", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.coverage"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.coverageU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.coverage"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.coverageV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.coverage"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.translateFrame", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.translateFrame"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.translateFrameU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.translateFrame"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.translateFrameV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.translateFrame"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.rotateFrame", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.rotateFrame"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.mirrorU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.mirrorU"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.mirrorV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.mirrorV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.stagger", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.stagger"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.wrapU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.wrapU"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.wrapV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.wrapV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.repeatUV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.repeatUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.repeatU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.repeatUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.repeatV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.repeatUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.offset", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.offset"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.offsetU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.offset"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.offsetV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.offset"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.rotateUV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.rotateUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.noiseUV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.noiseUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.noiseU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.noiseUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.noiseV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.noiseUV"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexCameraOne", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexCameraOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexCameraOneX", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexCameraOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexCameraOneY", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexCameraOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexCameraOneZ", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexCameraOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvOne", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvOneU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvOneV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvOne"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvTwo", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvTwo"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvTwoU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvTwo"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvTwoV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvTwo"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvThree", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvThree"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvThreeU", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvThree"
+        }, 
+        {
+            "to": "file6", 
+            "toAttribute": "file6.vertexUvThreeV", 
+            "from": "place2dTexture6", 
+            "fromAttribute": "place2dTexture6.vertexUvThree"
+        }, 
+        {
+            "to": "METAL", 
+            "toAttribute": "METAL.specularRoughness", 
+            "from": "remapValue1", 
+            "fromAttribute": "remapValue1.outValue"
+        }, 
+        {
+            "to": "remapValue1", 
+            "toAttribute": "remapValue1.inputValue", 
+            "from": "file7", 
+            "fromAttribute": "file7.outColorR"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.uvCoord", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.uCoord", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vCoord", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.uvFilterSize", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUvFilterSize"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.uvFilterSizeX", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUvFilterSize"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.uvFilterSizeY", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.outUvFilterSize"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.coverage", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.coverage"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.coverageU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.coverage"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.coverageV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.coverage"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.translateFrame", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.translateFrame"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.translateFrameU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.translateFrame"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.translateFrameV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.translateFrame"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.rotateFrame", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.rotateFrame"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.mirrorU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.mirrorU"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.mirrorV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.mirrorV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.stagger", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.stagger"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.wrapU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.wrapU"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.wrapV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.wrapV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.repeatUV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.repeatUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.repeatU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.repeatUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.repeatV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.repeatUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.offset", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.offset"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.offsetU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.offset"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.offsetV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.offset"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.rotateUV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.rotateUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.noiseUV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.noiseUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.noiseU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.noiseUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.noiseV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.noiseUV"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexCameraOne", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexCameraOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexCameraOneX", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexCameraOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexCameraOneY", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexCameraOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexCameraOneZ", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexCameraOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvOne", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvOneU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvOneV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvOne"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvTwo", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvTwo"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvTwoU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvTwo"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvTwoV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvTwo"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvThree", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvThree"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvThreeU", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvThree"
+        }, 
+        {
+            "to": "file7", 
+            "toAttribute": "file7.vertexUvThreeV", 
+            "from": "place2dTexture7", 
+            "fromAttribute": "place2dTexture7.vertexUvThree"
+        }
+    ], 
+    "nodes": {
+        "file3": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_NRM_3K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "Raw", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": true, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_NRM_3K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "file2": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_GLOSS_3K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "Raw", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": false, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_GLOSS_3K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "file1": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_COL_VAR2_3K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "sRGB", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": false, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Concrete21/3K/Concrete21_COL_VAR2_3K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "remapValue2": {
+            "isHistoricallyInteresting": 2, 
+            "inputMin": 0.0, 
+            "nodeState": 0, 
+            "outColorG": 1.0, 
+            "frozen": false, 
+            "outputMin": 0.0, 
+            "outputMax": 1.0, 
+            "inputMax": 1.0, 
+            "outColorR": 1.0, 
+            "outColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "binMembership": null, 
+            "inputValue": 1.0, 
+            "outValue": 1.0, 
+            "caching": false, 
+            "outColorB": 1.0
+        }, 
+        "file7": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/GrungePaint0049_L.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "sRGB", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": false, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/GrungePaint0049_L.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "file6": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_NRM_6K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "Raw", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": true, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_NRM_6K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "file5": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_GLOSS_6K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "Raw", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": false, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_GLOSS_6K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "file4": {
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapV": true, 
+            "useMaximumRes": false, 
+            "filterWidth": 0.7070000171661377, 
+            "ignoreColorSpaceFileRules": false, 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "computedFileTextureNamePattern": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_COL_VAR2_6K.jpg", 
+            "defaultColorG": 0.5, 
+            "rayDepth": 0, 
+            "defaultColor": [
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "defaultColorB": 0.5, 
+            "binMembership": null, 
+            "outSizeY": 0.0, 
+            "outSizeX": 0.0, 
+            "byCycleIncrement": 1, 
+            "defaultColorR": 0.5, 
+            "vertexUvOneV": 0.0, 
+            "useFrameExtension": false, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "preFilterRadius": 2.0, 
+            "alphaOffset": 0.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "outColorG": 0.0, 
+            "outColorR": 0.0, 
+            "stagger": false, 
+            "uvTileProxyQuality": 1, 
+            "colorProfile": 0, 
+            "disableFileLoad": false, 
+            "colorSpace": "sRGB", 
+            "vertexUvThreeU": 0.0, 
+            "primitiveId": 0, 
+            "colorGain": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "vCoord": 0.0, 
+            "colorManagementConfigFileEnabled": false, 
+            "colorOffsetB": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "alphaIsLuminance": false, 
+            "colorOffsetG": 0.0, 
+            "infoBits": 0, 
+            "colorOffset": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiFilter": 3, 
+            "vertexCameraTwoY": 0.0, 
+            "colorOffsetR": 0.0, 
+            "ptexFilterSharpness": 0.0, 
+            "frameExtension": 1, 
+            "vertexCameraTwoX": 0.0, 
+            "fileHasAlpha": false, 
+            "vertexCameraTwoZ": 0.0, 
+            "pixelCenterY": 0.0, 
+            "pixelCenterX": 0.0, 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorManagementEnabled": true, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePosition": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "baseExplicitUvTilePositionV": 0.0, 
+            "baseExplicitUvTilePositionU": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "explicitUvTiles": [
+                []
+            ], 
+            "outTransparencyR": 0.0, 
+            "alphaGain": 1.0, 
+            "filterOffset": 0.0, 
+            "fileTextureNamePattern": "", 
+            "vertexCameraThreeY": 0.0, 
+            "vertexCameraThreeX": 0.0, 
+            "vertexCameraThreeZ": 0.0, 
+            "outTransparencyG": 0.0, 
+            "vertexCameraThree": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "wrapU": true, 
+            "objectType": 0, 
+            "isHistoricallyInteresting": 2, 
+            "hdrMapping": 0, 
+            "invert": false, 
+            "outAlpha": 1.0, 
+            "useHardwareTextureCycling": false, 
+            "useCache": false, 
+            "workingSpace": "scene-linear Rec 709/sRGB", 
+            "filter": 1.0, 
+            "doTransform": true, 
+            "forceSwatchGen": false, 
+            "coverageV": 1.0, 
+            "coverageU": 1.0, 
+            "filterType": 3, 
+            "offsetV": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiUserOptions": "", 
+            "uvTilingMode": 0, 
+            "frozen": false, 
+            "rotateUV": 0.0, 
+            "hdrExposure": 0.0, 
+            "colorManagementConfigFilePath": "", 
+            "ptexFilterWidth": 1.0, 
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "outSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "startCycleExtension": 1, 
+            "dirtyPixelRegion": false, 
+            "blurPixelation": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvTileProxyDirty": true, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvOneU": 0.0, 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "endCycleExtension": 1, 
+            "uvTileProxyGenerate": false, 
+            "nodeState": 0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "ptexFilterBlur": 0.0, 
+            "frameOffset": 0, 
+            "colorGainB": 1.0, 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "exposure": 0.0, 
+            "pixelCenter": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwo": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "colorGainR": 1.0, 
+            "fileTextureName": "I:/OPALE/ASSET/MAYA/TEST_RENDU_CLARISSE//sourceimages/Bricks13/6K/Bricks13_COL_VAR2_6K.jpg", 
+            "aiAutoTx": true, 
+            "preFilter": false, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexUvTwoV": 0.0, 
+            "ptexFilterInterpolateLevels": false, 
+            "aiMipBias": 0, 
+            "caching": false, 
+            "colorGainG": 1.0, 
+            "aiUseDefaultColor": true, 
+            "ptexFilterType": 3
+        }, 
+        "remapValue1": {
+            "isHistoricallyInteresting": 2, 
+            "inputMin": 0.0, 
+            "nodeState": 0, 
+            "outColorG": 0.0, 
+            "frozen": false, 
+            "outputMin": 0.0, 
+            "outputMax": 1.0, 
+            "inputMax": 1.0, 
+            "outColorR": 0.0, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "binMembership": null, 
+            "inputValue": 0.0, 
+            "outValue": 0.0, 
+            "caching": false, 
+            "outColorB": 0.0
+        }, 
+        "remapColor1": {
+            "isHistoricallyInteresting": 2, 
+            "inputMin": 0.0, 
+            "nodeState": 0, 
+            "colorB": 0.0, 
+            "outColorG": 0.0, 
+            "colorG": 0.0, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "outputMin": 0.0, 
+            "outputMax": 1.0, 
+            "inputMax": 1.0, 
+            "outColorR": 0.0, 
+            "color": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "binMembership": null, 
+            "colorR": 0.0, 
+            "caching": false, 
+            "outColorB": 0.0, 
+            "renderPassMode": 1
+        }, 
+        "reverse2": {
+            "isHistoricallyInteresting": 2, 
+            "outputZ": 0.0, 
+            "nodeState": 0, 
+            "outputY": 0.0, 
+            "aiInputB": 0.0, 
+            "aiInput": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "inputX": 1.0, 
+            "inputY": 1.0, 
+            "outputX": 0.0, 
+            "aiInputR": 0.0, 
+            "inputZ": 1.0, 
+            "binMembership": null, 
+            "output": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "caching": false, 
+            "input": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiInputG": 0.0, 
+            "aiUserOptions": ""
+        }, 
+        "reverse1": {
+            "isHistoricallyInteresting": 2, 
+            "outputZ": 1.0, 
+            "nodeState": 0, 
+            "outputY": 1.0, 
+            "aiInputB": 0.0, 
+            "aiInput": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "inputX": 1.0, 
+            "inputY": 0.0, 
+            "outputX": 0.0, 
+            "aiInputR": 0.0, 
+            "inputZ": 0.0, 
+            "binMembership": null, 
+            "output": [
+                [
+                    0.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "caching": false, 
+            "input": [
+                [
+                    1.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiInputG": 0.0, 
+            "aiUserOptions": ""
+        }, 
+        "CONCRETE": {
+            "baseColorR": 0.0, 
+            "specularColorB": 1.0, 
+            "coatRoughness": 0.10000000149011612, 
+            "id5R": 0.0, 
+            "aiEnableMatte": false, 
+            "coatNormalZ": 0.0, 
+            "coatNormalY": 0.0, 
+            "coatNormalX": 0.0, 
+            "id7R": 0.0, 
+            "transmissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurface": 0.0, 
+            "binMembership": null, 
+            "aovId8": "", 
+            "aovId5": "", 
+            "aovId4": "", 
+            "aovId7": "", 
+            "aovId6": "", 
+            "aovId1": "", 
+            "id7G": 0.0, 
+            "aovId3": "", 
+            "aovId2": "", 
+            "specularColorR": 1.0, 
+            "specularColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurfaceScale": 1.0, 
+            "specularColorG": 1.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "id5G": 0.0, 
+            "outColorG": 0.0, 
+            "transmission": 0.0, 
+            "id4R": 0.0, 
+            "outColorR": 0.0, 
+            "tangentY": 0.0, 
+            "id5B": 0.0, 
+            "id8B": 0.0, 
+            "id4G": 0.0, 
+            "transmissionDepth": 0.0, 
+            "id4B": 0.0, 
+            "baseColorG": 0.0, 
+            "aiMatteColorR": 0.0, 
+            "id6G": 0.0, 
+            "subsurfaceColorG": 1.0, 
+            "subsurfaceColorB": 1.0, 
+            "id6B": 0.0, 
+            "metalness": 0.0, 
+            "aiMatteColorB": 0.0, 
+            "aiMatteColorA": 0.0, 
+            "subsurfaceColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiMatteColorG": 0.0, 
+            "subsurfaceColorR": 1.0, 
+            "id6R": 0.0, 
+            "internalReflections": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "indirectDiffuse": 1.0, 
+            "id8": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id6": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id7": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRoughness": 0.0, 
+            "id5": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id2": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id3": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id1": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRotation": 0.0, 
+            "exitToBackground": false, 
+            "transmissionScatterAnisotropy": 0.0, 
+            "normalCameraY": 0.0, 
+            "aiMatteColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "base": 1.0, 
+            "diffuseRoughness": 0.0, 
+            "coatNormal": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "emissionColorR": 1.0, 
+            "transmissionColorR": 1.0, 
+            "transmissionScatterR": 0.0, 
+            "emissionColorB": 1.0, 
+            "transmissionColorB": 1.0, 
+            "transmissionColorG": 1.0, 
+            "emissionColorG": 1.0, 
+            "tangent": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coatIOR": 1.5, 
+            "transmissionScatterB": 0.0, 
+            "outTransparencyR": 0.0, 
+            "baseColorB": 0.0, 
+            "indirectSpecular": 1.0, 
+            "outTransparencyG": 0.0, 
+            "transmissionScatter": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "isHistoricallyInteresting": 2, 
+            "normalCameraX": 0.0, 
+            "normalCameraZ": 1.0, 
+            "outAlpha": 0.0, 
+            "specularAnisotropy": 0.0, 
+            "id1B": 0.0, 
+            "id1G": 0.0, 
+            "emission": 0.0, 
+            "opacityR": 1.0, 
+            "id7B": 0.0, 
+            "id1R": 0.0, 
+            "opacityG": 1.0, 
+            "opacityB": 1.0, 
+            "emissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "transmissionDispersion": 0.0, 
+            "tangentX": 0.0, 
+            "tangentZ": 0.0, 
+            "id8G": 0.0, 
+            "normalCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "subsurfaceAnisotropy": 0.0, 
+            "id8R": 0.0, 
+            "subsurfaceRadius": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "thinWalled": false, 
+            "specularIOR": 1.5199999809265137, 
+            "id2B": 0.0, 
+            "id2G": 0.0, 
+            "thinFilmThickness": 0.0, 
+            "id2R": 0.0, 
+            "thinFilmIOR": 1.5, 
+            "subsurfaceRadiusG": 1.0, 
+            "subsurfaceRadiusB": 1.0, 
+            "coatColorR": 1.0, 
+            "specular": 1.0, 
+            "coatColorG": 1.0, 
+            "subsurfaceRadiusR": 1.0, 
+            "subsurfaceType": 0, 
+            "coatColorB": 1.0, 
+            "opacity": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "baseColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "nodeState": 0, 
+            "id3G": 0.0, 
+            "caustics": false, 
+            "id3B": 0.0, 
+            "transmissionScatterG": 0.0, 
+            "transmitAovs": false, 
+            "coatColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "id3R": 0.0, 
+            "frozen": false, 
+            "transmissionExtraRoughness": 0.0, 
+            "coat": 0.0, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "caching": false, 
+            "id4": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "bump2d1": {
+            "outNormalY": 0.0, 
+            "outNormalX": 0.0, 
+            "outNormalZ": 1.0, 
+            "normalCameraZ": 1.0, 
+            "provide3dInfo": false, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vCoord": 9.999999747378752e-06, 
+            "vertexUvTwoU": 0.0, 
+            "uCoord": 0.0, 
+            "isHistoricallyInteresting": 2, 
+            "pointCameraX": 0.0, 
+            "pointCameraZ": 0.0, 
+            "refPointCameraY": 0.0, 
+            "refPointCameraX": 0.0, 
+            "refPointCameraZ": 0.0, 
+            "refPointCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwoX": 9.999999747378752e-06, 
+            "infoBits": 3, 
+            "normalCameraY": 0.0, 
+            "vertexCameraTwoY": 9.999999747378752e-06, 
+            "binMembership": null, 
+            "rayOrigin": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentUy": 0.0, 
+            "tangentUx": 1.0, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    9.999999747378752e-06
+                ]
+            ], 
+            "bumpFilter": 1.0, 
+            "aiFlipR": true, 
+            "xPixelAngle": 0.002053000032901764, 
+            "pointCameraY": 0.0, 
+            "nodeState": 0, 
+            "vertexCameraTwoZ": 0.0, 
+            "bumpInterp": 1, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "normalCameraX": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "pointObj": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentUz": 0.0, 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "pointObjZ": 0.0, 
+            "refPointObj": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "pointObjX": 0.0, 
+            "pointObjY": 0.0, 
+            "outNormal": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "refPointObjZ": 0.0, 
+            "vertexCameraTwo": [
+                [
+                    9.999999747378752e-06, 
+                    9.999999747378752e-06, 
+                    0.0
+                ]
+            ], 
+            "refPointObjX": 0.0, 
+            "refPointObjY": 0.0, 
+            "aiUserOptions": "", 
+            "tangentUCamera": [
+                [
+                    1.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentVx": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiSwapTangents": false, 
+            "bumpFilterOffset": 0.0, 
+            "bumpValue": 1.0, 
+            "aiFlipG": true, 
+            "frozen": false, 
+            "tangentVCamera": [
+                [
+                    0.0, 
+                    1.0, 
+                    0.0
+                ]
+            ], 
+            "pointCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentVy": 1.0, 
+            "normalCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "adjustEdges": false, 
+            "vertexUvTwoV": 0.0, 
+            "tangentVz": 0.0, 
+            "aiUseDerivatives": true, 
+            "caching": false, 
+            "bumpDepth": 1.0, 
+            "rayOriginX": 0.0, 
+            "rayOriginY": 0.0, 
+            "rayOriginZ": 0.0
+        }, 
+        "bump2d2": {
+            "outNormalY": 0.0, 
+            "outNormalX": 0.0, 
+            "outNormalZ": 1.0, 
+            "normalCameraZ": 1.0, 
+            "provide3dInfo": false, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vCoord": 9.999999747378752e-06, 
+            "vertexUvTwoU": 0.0, 
+            "uCoord": 0.0, 
+            "isHistoricallyInteresting": 2, 
+            "pointCameraX": 0.0, 
+            "pointCameraZ": 0.0, 
+            "refPointCameraY": 0.0, 
+            "refPointCameraX": 0.0, 
+            "refPointCameraZ": 0.0, 
+            "refPointCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraTwoX": 9.999999747378752e-06, 
+            "infoBits": 3, 
+            "normalCameraY": 0.0, 
+            "vertexCameraTwoY": 9.999999747378752e-06, 
+            "binMembership": null, 
+            "rayOrigin": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentUy": 0.0, 
+            "tangentUx": 1.0, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    9.999999747378752e-06
+                ]
+            ], 
+            "bumpFilter": 1.0, 
+            "aiFlipR": true, 
+            "xPixelAngle": 0.002053000032901764, 
+            "pointCameraY": 0.0, 
+            "nodeState": 0, 
+            "vertexCameraTwoZ": 0.0, 
+            "bumpInterp": 1, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "normalCameraX": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "pointObj": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentUz": 0.0, 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "pointObjZ": 0.0, 
+            "refPointObj": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "pointObjX": 0.0, 
+            "pointObjY": 0.0, 
+            "outNormal": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "refPointObjZ": 0.0, 
+            "vertexCameraTwo": [
+                [
+                    9.999999747378752e-06, 
+                    9.999999747378752e-06, 
+                    0.0
+                ]
+            ], 
+            "refPointObjX": 0.0, 
+            "refPointObjY": 0.0, 
+            "aiUserOptions": "", 
+            "tangentUCamera": [
+                [
+                    1.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentVx": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "aiSwapTangents": false, 
+            "bumpFilterOffset": 0.0, 
+            "bumpValue": 1.0, 
+            "aiFlipG": true, 
+            "frozen": false, 
+            "tangentVCamera": [
+                [
+                    0.0, 
+                    1.0, 
+                    0.0
+                ]
+            ], 
+            "pointCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "tangentVy": 1.0, 
+            "normalCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "adjustEdges": false, 
+            "vertexUvTwoV": 0.0, 
+            "tangentVz": 0.0, 
+            "aiUseDerivatives": true, 
+            "caching": false, 
+            "bumpDepth": 1.0, 
+            "rayOriginX": 0.0, 
+            "rayOriginY": 0.0, 
+            "rayOriginZ": 0.0
+        }, 
+        "METAL": {
+            "baseColorR": 0.0, 
+            "specularColorB": 0.07700002193450928, 
+            "coatRoughness": 0.10000000149011612, 
+            "id5R": 0.0, 
+            "aiEnableMatte": false, 
+            "coatNormalZ": 0.0, 
+            "coatNormalY": 0.0, 
+            "coatNormalX": 0.0, 
+            "id7R": 0.0, 
+            "transmissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurface": 0.0, 
+            "binMembership": null, 
+            "aovId8": "", 
+            "aovId5": "", 
+            "aovId4": "", 
+            "aovId7": "", 
+            "aovId6": "", 
+            "aovId1": "", 
+            "id7G": 0.0, 
+            "aovId3": "", 
+            "aovId2": "", 
+            "specularColorR": 1.0, 
+            "specularColor": [
+                [
+                    1.0, 
+                    0.46750593185424805, 
+                    0.07700002193450928
+                ]
+            ], 
+            "subsurfaceScale": 1.0, 
+            "specularColorG": 0.46750593185424805, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "id5G": 0.0, 
+            "outColorG": 0.0, 
+            "transmission": 0.0, 
+            "id4R": 0.0, 
+            "outColorR": 0.0, 
+            "tangentY": 0.0, 
+            "id5B": 0.0, 
+            "id8B": 0.0, 
+            "id4G": 0.0, 
+            "transmissionDepth": 0.0, 
+            "id4B": 0.0, 
+            "baseColorG": 0.0, 
+            "aiMatteColorR": 0.0, 
+            "id6G": 0.0, 
+            "subsurfaceColorG": 1.0, 
+            "subsurfaceColorB": 1.0, 
+            "id6B": 0.0, 
+            "metalness": 0.0, 
+            "aiMatteColorB": 0.0, 
+            "aiMatteColorA": 0.0, 
+            "subsurfaceColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiMatteColorG": 0.0, 
+            "subsurfaceColorR": 1.0, 
+            "id6R": 0.0, 
+            "internalReflections": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "indirectDiffuse": 1.0, 
+            "id8": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id6": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id7": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRoughness": 0.0, 
+            "id5": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id2": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id3": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id1": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRotation": 0.0, 
+            "exitToBackground": false, 
+            "transmissionScatterAnisotropy": 0.0, 
+            "normalCameraY": 1.0, 
+            "aiMatteColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "base": 0.0, 
+            "diffuseRoughness": 0.0, 
+            "coatNormal": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "emissionColorR": 1.0, 
+            "transmissionColorR": 1.0, 
+            "transmissionScatterR": 0.0, 
+            "emissionColorB": 1.0, 
+            "transmissionColorB": 1.0, 
+            "transmissionColorG": 1.0, 
+            "emissionColorG": 1.0, 
+            "tangent": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coatIOR": 1.5, 
+            "transmissionScatterB": 0.0, 
+            "outTransparencyR": 0.0, 
+            "baseColorB": 0.0, 
+            "indirectSpecular": 1.0, 
+            "outTransparencyG": 0.0, 
+            "transmissionScatter": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "isHistoricallyInteresting": 2, 
+            "normalCameraX": 1.0, 
+            "normalCameraZ": 1.0, 
+            "outAlpha": 0.0, 
+            "specularAnisotropy": 0.0, 
+            "id1B": 0.0, 
+            "id1G": 0.0, 
+            "emission": 0.0, 
+            "opacityR": 1.0, 
+            "id7B": 0.0, 
+            "id1R": 0.0, 
+            "opacityG": 1.0, 
+            "opacityB": 1.0, 
+            "emissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "transmissionDispersion": 0.0, 
+            "tangentX": 0.0, 
+            "tangentZ": 0.0, 
+            "id8G": 0.0, 
+            "normalCamera": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurfaceAnisotropy": 0.0, 
+            "id8R": 0.0, 
+            "subsurfaceRadius": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "thinWalled": false, 
+            "specularIOR": 20.0, 
+            "id2B": 0.0, 
+            "id2G": 0.0, 
+            "thinFilmThickness": 0.0, 
+            "id2R": 0.0, 
+            "thinFilmIOR": 1.5, 
+            "subsurfaceRadiusG": 1.0, 
+            "subsurfaceRadiusB": 1.0, 
+            "coatColorR": 1.0, 
+            "specular": 1.0, 
+            "coatColorG": 1.0, 
+            "subsurfaceRadiusR": 1.0, 
+            "subsurfaceType": 0, 
+            "coatColorB": 1.0, 
+            "opacity": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "baseColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "nodeState": 0, 
+            "id3G": 0.0, 
+            "caustics": false, 
+            "id3B": 0.0, 
+            "transmissionScatterG": 0.0, 
+            "transmitAovs": false, 
+            "coatColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "id3R": 0.0, 
+            "frozen": false, 
+            "transmissionExtraRoughness": 0.0, 
+            "coat": 0.0, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "caching": false, 
+            "id4": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "BRICK": {
+            "baseColorR": 0.0, 
+            "specularColorB": 1.0, 
+            "coatRoughness": 0.10000000149011612, 
+            "id5R": 0.0, 
+            "aiEnableMatte": false, 
+            "coatNormalZ": 0.0, 
+            "coatNormalY": 0.0, 
+            "coatNormalX": 0.0, 
+            "id7R": 0.0, 
+            "transmissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurface": 0.0, 
+            "binMembership": null, 
+            "aovId8": "", 
+            "aovId5": "", 
+            "aovId4": "", 
+            "aovId7": "", 
+            "aovId6": "", 
+            "aovId1": "", 
+            "id7G": 0.0, 
+            "aovId3": "", 
+            "aovId2": "", 
+            "specularColorR": 1.0, 
+            "specularColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "subsurfaceScale": 1.0, 
+            "specularColorG": 1.0, 
+            "outColorB": 0.0, 
+            "outTransparencyB": 0.0, 
+            "id5G": 0.0, 
+            "outColorG": 0.0, 
+            "transmission": 0.0, 
+            "id4R": 0.0, 
+            "outColorR": 0.0, 
+            "tangentY": 0.0, 
+            "id5B": 0.0, 
+            "id8B": 0.0, 
+            "id4G": 0.0, 
+            "transmissionDepth": 0.0, 
+            "id4B": 0.0, 
+            "baseColorG": 0.0, 
+            "aiMatteColorR": 0.0, 
+            "id6G": 0.0, 
+            "subsurfaceColorG": 1.0, 
+            "subsurfaceColorB": 1.0, 
+            "id6B": 0.0, 
+            "metalness": 0.0, 
+            "aiMatteColorB": 0.0, 
+            "aiMatteColorA": 0.0, 
+            "subsurfaceColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "aiMatteColorG": 0.0, 
+            "subsurfaceColorR": 1.0, 
+            "id6R": 0.0, 
+            "internalReflections": true, 
+            "outTransparency": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "indirectDiffuse": 1.0, 
+            "id8": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id6": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id7": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRoughness": 0.0, 
+            "id5": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id2": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id3": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "id1": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "specularRotation": 0.0, 
+            "exitToBackground": false, 
+            "transmissionScatterAnisotropy": 0.0, 
+            "normalCameraY": 0.0, 
+            "aiMatteColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "base": 1.0, 
+            "diffuseRoughness": 0.0, 
+            "coatNormal": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "emissionColorR": 1.0, 
+            "transmissionColorR": 1.0, 
+            "transmissionScatterR": 0.0, 
+            "emissionColorB": 1.0, 
+            "transmissionColorB": 1.0, 
+            "transmissionColorG": 1.0, 
+            "emissionColorG": 1.0, 
+            "tangent": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coatIOR": 1.5, 
+            "transmissionScatterB": 0.0, 
+            "outTransparencyR": 0.0, 
+            "baseColorB": 0.0, 
+            "indirectSpecular": 1.0, 
+            "outTransparencyG": 0.0, 
+            "transmissionScatter": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "isHistoricallyInteresting": 2, 
+            "normalCameraX": 0.0, 
+            "normalCameraZ": 1.0, 
+            "outAlpha": 0.0, 
+            "specularAnisotropy": 0.0, 
+            "id1B": 0.0, 
+            "id1G": 0.0, 
+            "emission": 0.0, 
+            "opacityR": 1.0, 
+            "id7B": 0.0, 
+            "id1R": 0.0, 
+            "opacityG": 1.0, 
+            "opacityB": 1.0, 
+            "emissionColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "transmissionDispersion": 0.0, 
+            "tangentX": 0.0, 
+            "tangentZ": 0.0, 
+            "id8G": 0.0, 
+            "normalCamera": [
+                [
+                    0.0, 
+                    0.0, 
+                    1.0
+                ]
+            ], 
+            "subsurfaceAnisotropy": 0.0, 
+            "id8R": 0.0, 
+            "subsurfaceRadius": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "thinWalled": false, 
+            "specularIOR": 1.5199999809265137, 
+            "id2B": 0.0, 
+            "id2G": 0.0, 
+            "thinFilmThickness": 0.0, 
+            "id2R": 0.0, 
+            "thinFilmIOR": 1.5, 
+            "subsurfaceRadiusG": 1.0, 
+            "subsurfaceRadiusB": 1.0, 
+            "coatColorR": 1.0, 
+            "specular": 1.0, 
+            "coatColorG": 1.0, 
+            "subsurfaceRadiusR": 1.0, 
+            "subsurfaceType": 0, 
+            "coatColorB": 1.0, 
+            "opacity": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "baseColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "nodeState": 0, 
+            "id3G": 0.0, 
+            "caustics": false, 
+            "id3B": 0.0, 
+            "transmissionScatterG": 0.0, 
+            "transmitAovs": false, 
+            "coatColor": [
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "id3R": 0.0, 
+            "frozen": false, 
+            "transmissionExtraRoughness": 0.0, 
+            "coat": 0.0, 
+            "outColor": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "caching": false, 
+            "id4": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture3": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture2": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture1": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture7": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture6": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture5": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }, 
+        "place2dTexture4": {
+            "noiseU": 0.0, 
+            "noiseV": 0.0, 
+            "wrapU": true, 
+            "outU": 0.0, 
+            "outV": 0.0, 
+            "wrapV": true, 
+            "vertexUvThree": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uvFilterSizeY": 0.0, 
+            "vertexUvThreeU": 0.0, 
+            "uvFilterSizeX": 0.0, 
+            "vertexUvThreeV": 0.0, 
+            "translateFrameU": 0.0, 
+            "translateFrameV": 0.0, 
+            "coverageV": 1.0, 
+            "isHistoricallyInteresting": 2, 
+            "mirrorU": false, 
+            "mirrorV": false, 
+            "vCoord": 0.0, 
+            "coverageU": 1.0, 
+            "noiseUV": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "rotateFrame": 0.0, 
+            "vertexUvTwo": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "fast": false, 
+            "binMembership": null, 
+            "uvCoord": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "doTransform": true, 
+            "nodeState": 0, 
+            "vertexUvOneV": 0.0, 
+            "vertexUvOneU": 0.0, 
+            "uvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "vertexCameraOneZ": 0.0, 
+            "vertexCameraOneY": 0.0, 
+            "vertexCameraOneX": 0.0, 
+            "repeatUV": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "rotateUV": 0.0, 
+            "translateFrame": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "coverage": [
+                [
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "offset": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "uCoord": 0.0, 
+            "repeatU": 1.0, 
+            "repeatV": 1.0, 
+            "offsetU": 0.0, 
+            "vertexCameraOne": [
+                [
+                    0.0, 
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "outUvFilterSize": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ], 
+            "frozen": false, 
+            "offsetV": 0.0, 
+            "vertexUvTwoU": 0.0, 
+            "outUvFilterSizeY": 0.0, 
+            "stagger": false, 
+            "vertexUvTwoV": 0.0, 
+            "caching": false, 
+            "outUvFilterSizeX": 0.0, 
+            "vertexUvOne": [
+                [
+                    0.0, 
+                    0.0
+                ]
+            ]
+        }
+    }
+}
