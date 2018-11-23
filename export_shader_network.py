@@ -4,10 +4,12 @@ from functools import partial
 import os
 import json
 
-shaderNetwork = {
-    "nodes": {},
-    "connections": []
-}
+# shaderNetwork = {
+#     "nodes": {},
+#     "connections": []
+# }
+
+objects = {}
 
 def main():
     createWindow()
@@ -34,21 +36,66 @@ def createWindow():
 
     cmds.showWindow( window )
 
-def getAllNodes(nodes):
+def getAllNodes(nodes, shaderNetwork):
     for node in nodes:
         history = cmds.listHistory(node)
         for n in history:
             if not n in shaderNetwork["nodes"]:
-                print(cmds.objectType(n))
+                #print(cmds.objectType(n))
                 shaderNetwork["nodes"][n] = {}
                 shaderNetwork["nodes"][n]["type"] = cmds.objectType(n)
                 shaderNetwork["nodes"][n]["data"] = {}
                 nodeAttributes = cmds.listAttr(n)
+                tempNode = cmds.createNode(cmds.objectType(n), n="tempNode")
+
                 for a in nodeAttributes:
+                    # print("__________________________________")
+                    # print(cmds.getAttr(n + "." + a, type=True))
+                    # print("__________________________________")
                     try:
-                        shaderNetwork["nodes"][n]["data"][a] = cmds.getAttr(n + '.' + str(a))
+                        type = cmds.getAttr(n + "." + a, type=True)
+                        if type != "TdataCompound":
+                            try:
+                                nodeAttr = cmds.getAttr(n + '.' + str(a))
+                                tempAttr = cmds.getAttr(tempNode + '.' + str(a))
+                                if nodeAttr != tempAttr:
+                                    shaderNetwork["nodes"][n]["data"][a] = {}
+                                    shaderNetwork["nodes"][n]["data"][a]["value"] = nodeAttr
+                                    shaderNetwork["nodes"][n]["data"][a]["type"] = cmds.getAttr(n + "." + a, type=True)
+                            except:
+                                pass
+                        else:
+                            #print("COMPOUND")
+                            #print(a)
+                            looping = True
+                            attrIndex = 0
+                            compounds = []
+                            while looping:
+                                #print(a)
+                                try:
+                                    compound = cmds.getAttr(str(n) + '.' + str(a) + "[" + str(attrIndex) + "]")
+                                    #print(compound[0][2])
+                                    if(compound[0][2] == 0.0):
+                                        #print("empty")
+                                        pass
+                                    else:
+                                        compounds.append(compound[0])
+
+                                    attrIndex += 1
+                                    if(attrIndex == 100):
+                                        looping = False
+                                except:
+                                    loop = false
+                            #print(compounds)
+                            if(compounds[0]):
+                                #print("not empty")
+                                shaderNetwork["nodes"][n]["data"][a] = {}
+                                shaderNetwork["nodes"][n]["data"][a]["value"] = compounds
+                                shaderNetwork["nodes"][n]["data"][a]["type"] = "TdataCompound"
                     except:
                         pass
+                cmds.delete(tempNode)
+
 
             attributes = cmds.listAttr(n)
 
@@ -79,7 +126,7 @@ def getAllNodes(nodes):
         #         pass
         #     if connections:
         #         getAllNodes(connections)
-
+    return shaderNetwork
 
 
 
@@ -91,7 +138,7 @@ def shaders_to_json(objA=None, file_path=None):
     if not file_path:
         return
 
-    shaders = []
+    #shaders = []
 
     for i in objA:
         allChildren = cmds.listRelatives(i, ad=1)
@@ -99,19 +146,31 @@ def shaders_to_json(objA=None, file_path=None):
         for eachChild in allChildren:
             # Get the shader groups attached to this particular object
             shaderGroups = cmds.listConnections(cmds.listHistory(eachChild))
+            print(shaderGroups)
 
             if shaderGroups is not None:
+
                 # Get the material attached to the shader group
-                materials = [x for x in cmds.ls(cmds.listConnections(shaderGroups), materials=1)]
+                for shader in shaderGroups:
+                    type = cmds.objectType(shader)
+                    if(type == "shadingEngine"):
+                        shaders = []
 
-                if materials:
-                    # If its an AlSurface material add it to the list
-                    #if cmds.nodeType(materials[0]) == 'alSurface':
-                    if materials not in shaders:
-                        shaders.append(materials[0])
+                        materials = [x for x in cmds.ls(cmds.listConnections(shaderGroups), materials=1)]
 
-    getAllNodes(shaders)
-    print shaderNetwork["nodes"]
+                        if materials:
+                            # If its an AlSurface material add it to the list
+                            #if cmds.nodeType(materials[0]) == 'alSurface':
+                            if materials not in shaders:
+                                shaders.append(materials[0])
+
+                        network = {
+                            "nodes": {},
+                            "connections": []
+                        }
+                        nodeNetwork = getAllNodes(shaders, network)
+                        objects[shader] = nodeNetwork
+    #print shaderNetwork["nodes"]
 
     for shader_name in shaders:
 
@@ -169,11 +228,11 @@ def shaders_to_json(objA=None, file_path=None):
 
 
     with open(file_path, 'w') as fp:
-        json.dump(shaderNetwork, fp, sort_keys=False, indent=4)
+        json.dump(objects, fp, sort_keys=False, indent=4)
 
     print '[Info]Finished exporting material data...'
 
 
 
-# shaders_to_json(objA=['pSphere1', 'pSphere2', 'pSphere3'], file_path='C:/Users/etudiant/Documents/clarisse_alshader_io/test_mat.json')
-main()
+shaders_to_json(objA=['pSphere1', 'pSphere2', 'pSphere3'], file_path='C:/Users/etudiant/Documents/clarisse_alshader_io/pSphere1.json')
+#main()
