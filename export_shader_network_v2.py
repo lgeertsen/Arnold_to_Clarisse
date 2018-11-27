@@ -104,7 +104,7 @@ def getAllNodes(nodes, shaderNetwork):
                                         compounds.append(compound[0])
 
                                     attrIndex += 1
-                                    if(attrIndex == 100):
+                                    if(attrIndex == 20):
                                         looping = False
                                 except:
                                     loop = false

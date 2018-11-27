@@ -4,6 +4,218 @@ import os
 import json
 import ntpath
 
+path="project://scene"
+
+nodeTrees = []
+
+
+
+class NodeTree(object):
+    def __init__(self, name, nodes, connections, objects, object):
+        self.name = name
+        self.jsonNodes = nodes
+        self.jsonConnections = connections
+        self.jsonObjects = objects
+        self.object = object
+        self.material = None
+        self.nodes = {}
+
+    def createNodes(self):
+        for node, value in self.jsonNodes.items():
+            type = nodeLibrary.get(value["type"])
+            #texture = None
+            if type:
+                if type[0] == "Material":
+                    #texture = createMaterial(node, type, default_path, material)
+                    mat = Material(self.name, value["type"], type[1], value["data"])
+                    self.material = mat
+                    self.nodes[node] = mat
+                    #mat = texture
+                    #node = material
+                    #print(texture.name)
+                    #texture = "project://scene/" + str(material)
+                elif type:
+                    #texture = createNode(node, type, default_path)
+                    n = Node(node, value["type"], type[1], value["data"])
+                    self.nodes[n.name] = n
+                    #print(texture.name)
+
+#                if texture:
+#                    materialNodes[node] = texture
+#                    parameterNodes[node] = {}
+#                    parameterNodes[node]["type"] = texture
+#                    parameterNodes[node]["data"] = value["data"]
+#                else:
+#                    toProcess[node] = value
+        #print(self.material)
+        #print(self.nodes)
+        self.linkNodes()
+
+    def linkNodes(self):
+        for connection in self.jsonConnections:
+            #print(connection)
+            child = self.nodes.get(connection["from"])
+            if not child:
+                continue
+
+            parent = self.nodes.get(connection["to"])
+            if not parent:
+                continue
+
+            connector = connectionLibrary.get(connection["toAttribute"])
+            if not connector:
+                continue
+
+            parent.input.append(child)
+            child.output.append({"to": parent, "connection": connector})
+
+            #if(isinstance(connector, list)):
+            for c in connector:
+                ix.cmds.SetTexture([str(parent.path) + "." + str(c)], str(child.path))
+            #else:
+                #ix.cmds.SetTexture([str(parent) + "." + str(connector)], str(child))
+        self.replaceTriplanars()
+
+
+    def replaceTriplanars(self):
+        for name, node in self.nodes.items():
+            if(node.typeM == "aiTriplanar"):
+                print("Triplanar")
+                print(node.name)
+                files = []
+                for input in node.input:
+                    for output in node.output:
+                        for c in output["connection"]:
+                            ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(input.path))
+
+                node.output = []
+                files = self.getLinkedFiles(node.input)
+                for file in files:
+                    print(file.output)
+                    doDuplicate = True
+
+                    for output in file.output:
+                        if output["to"].typeM == "aiTriplanar":
+                            print(output["to"].typeM)
+                            doDuplicate = False
+
+                    if not doDuplicate:
+                        continue
+
+                    duplicate = self.duplicateTriplanar(node)
+                    duplicate.output = file.output
+                    connection = ["right", "left", "top", "bottom", "front", "back"]
+                    file.output = [{"to": duplicate, "connection": connection}]
+                    self.nodes[duplicate.name] = duplicate
+                    for c in connection:
+                        ix.cmds.SetTexture([str(duplicate.path) + "." + str(c)], str(file.path))
+                    for output in duplicate.output:
+                        for c in output["connection"]:
+                            ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(duplicate.path))
+
+        self.addNodeValue()
+
+
+    def getLinkedFiles(self, n):
+        if not n:
+            return []
+
+        nodes = n
+        files = []
+        while nodes:
+            node = nodes.pop(0)
+            if(node.typeM == "file" or node.typeM == "aiNoise" or node.typeM == "noise"):
+                files.append(node)
+            if node.input:
+                nodes.extend(node.input)
+        return files
+
+    def duplicateTriplanar(self, node):
+        duplicate = Node(node.name, node.typeM, node.typeC, node.data)
+        return duplicate
+
+    def addNodeValues(self, node, data):
+    #    print("----------------" + node + "ADD NODE VALUES----------------")
+        #print(str(data["type"]) + ": " + str(data["data"]))
+        for parameter, value in data["data"].items():
+    #        print(str(parameter) + ": " + str(value))
+            type = parameterSwitch.get(parameter)
+
+            if not type:
+                continue
+
+    #        if(isinstance(type, list) and isinstance(type[0], str)):
+    #            type[1](data, value, type[2])
+    #            continue
+            if(value["type"] == "string"):
+                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"])])
+                #ix.cmds.SetValues([str(data["type"]) + "." + str(type)], [str(value["value"])])
+                continue
+            if(value["type"] == "float"):
+                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"])])
+                continue
+            if(value["type"] == "float3"):
+                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"][0][0]), str(value["value"][0][1]), str(value["value"][0][2])])
+                continue
+            if(value["type"] == "bool"):
+                if(value["value"]):
+                    type[0]([str(data["type"]) + "." + str(type[1])], ["1"])
+                continue
+            if(value["type"] == "TdataCompound"):
+                type(data["type"], value["value"])
+
+        self.attributeMaterials()
+
+    def attributeMaterials(self):
+        if not self.material:
+            return
+        #print(mat)
+        for object in self.jsonObjects:
+            print self.material
+            ix.cmds.SetValues([str(self.object) + "/" + str(object) + ".materials[0]"], [str(self.material.path)])
+
+
+
+
+
+
+class MaterialNode(object):
+    def __init__(self, name, typeM, typeC, data):
+        self.name = name
+        self.typeM = typeM
+        self.typeC = typeC
+        self.data = data
+        self.input = []
+
+
+
+
+class Material(MaterialNode):
+    def __init__(self, name, typeM, typeC, data):
+        super(Material, self).__init__(name, typeM, typeC, data)
+        self.path = self.createMaterial()
+
+    def createMaterial(self):
+        material = ix.cmds.CreateObject(str(self.name), str(self.typeC), "Global", path)
+        return material
+
+
+
+
+class Node(MaterialNode):
+    def __init__(self, name, typeM, typeC, data):
+        super(Node, self).__init__(name, typeM, typeC, data)
+        self.path = self.createNode()
+        self.output = []
+
+
+    def createNode(self):
+        node = ix.cmds.CreateObject(str(self.name) + "_tx", str(self.typeC), "Global", path)
+        return node
+
+
+
+
 materials = {}
 
 def createStandardSurface(node, path):
@@ -102,6 +314,56 @@ def addAllCurves(node, data):
             ])
 
 
+
+
+nodeLibrary = {
+    "aiStandardSurface"     : ["Material", "MaterialPhysicalStandard"],
+    "remapColor"            : ["Node", "TextureRemap"],
+    "file"                  : ["Node", "TextureMapFile"],
+    "bump2d"                : ["Node", "TextureNormalMap"],
+    "reverse"               : ["Node", "TextureInvert"],
+    "remapValue"            : ["Node", "TextureRescale"],
+    "aiTriplanar"           : ["Node", "TextureTriplanar"],
+    "blendColors"           : ["Node", "TextureBlend"],
+    "remapHsv"              : ["Node", "TextureColorModel"],
+    "aiNoise"               : ["Node", "TextureFractalNoise"],
+    "noise"                 : ["Node", "TexturePerlinNoise"]
+}
+
+connectionLibrary = {
+    "normalCamera"          : ["normal_input"],
+    "baseColor"             : ["diffuse_front_color"],
+    "specularRoughness"     : ["specular_1_roughness"],
+    "color"                 : ["input"],
+    "inputX"                : ["input"],
+    "bumpValue"             : ["input"],
+    "inputValue"            : ["input"],
+    "inputR"                : ["right", "left", "top", "bottom", "front", "back"],
+    "color1"                : ["input1"],
+    "color2"                : ["input2"],
+    "blender"               : ["mix"]
+}
+
+parameterLibrary = {
+    "fileTextureName": [ix.cmds.SetValues, "filename[0]"],
+    "red": addCurveRed,
+    "green": addCurveGreen,
+    "blue": addCurveBlue,
+    "specularColor": [ix.cmds.SetValues, "specular_1_color"],
+    "specularRoughness": [ix.cmds.SetValues, "specular_1_roughness"],
+    "specularIOR": [ix.cmds.SetValues, "specular_1_index_of_refraction"],
+    "baseColor": [ix.cmds.SetValues, "diffuse_front_color"],
+    "base": [ix.cmds.SetValues, "diffuse_front_strength"],
+    "alphaIsLuminance": [ix.cmds.SetValues, "single_channel_file_behavior"]
+}
+
+
+
+
+
+
+
+
 def createMaterial(node, type, path, material):
 #    try:
 #        ix.cmds.DeleteItem("project://scene/" + str(material))
@@ -132,39 +394,12 @@ def setSpecular(data, value, type):
     #ix.cmds.SetValues([str(data["type"]) + "." + str(type)], [str(value["value"])])
     pass
 
-nodeSwitch = {
-    "aiStandardSurface"     : "MaterialPhysicalStandard",
-    "remapColor"            : "TextureRemap",
-    "file"                  : "TextureMapFile",
-    "bump2d"                : "TextureNormalMap",
-    "reverse"               : "TextureInvert",
-    "remapValue"            : "TextureRescale"
-}
 
-connectionSwitch = {
-    "normalCamera"          : "normal_input",
-    "baseColor"             : "diffuse_front_color",
-    "specularRoughness"     : "specular_1_roughness",
-    "color"                 : "input",
-    "inputX"                : "input",
-    "bumpValue"             : "input",
-    "inputValue"            : "input"
-}
 
-parameterSwitch = {
-    "fileTextureName": [ix.cmds.SetValues, "filename[0]"],
-    "red": addCurveRed,
-    "green": addCurveGreen,
-    "blue": addCurveBlue,
-    "specularColor": [ix.cmds.SetValues, "specular_1_color"],
-    "specularRoughness": [ix.cmds.SetValues, "specular_1_roughness"],
-    "specularIOR": [ix.cmds.SetValues, "specular_1_index_of_refraction"],
-    "baseColor": [ix.cmds.SetValues, "diffuse_front_color"],
-    "base": [ix.cmds.SetValues, "diffuse_front_strength"],
-    "alphaIsLuminance": [ix.cmds.SetValues, "single_channel_file_behavior"]
-}
 
 def createNodes(nodes, default_path, material):
+    print(material)
+    print(nodes)
     materialNodes = {}
     toProcess = {}
 
@@ -186,13 +421,16 @@ def createNodes(nodes, default_path, material):
         type = nodeSwitch.get(value["type"])
         texture = None
         if type == "MaterialPhysicalStandard":
-            texture = createMaterial(node, type, default_path, material)
+            #texture = createMaterial(node, type, default_path, material)
+            texture = Material(material, value["type"], type)
             mat = texture
             #node = material
-            #print(material)
+            #print(texture.name)
             #texture = "project://scene/" + str(material)
         elif type:
-            texture = createNode(node, type, default_path)
+            #texture = createNode(node, type, default_path)
+            texture = Node(node, value["type"], type)
+            #print(texture.name)
 
         if texture:
             materialNodes[node] = texture
@@ -207,9 +445,9 @@ def createNodes(nodes, default_path, material):
 #        print(str(node) + ": " + str(values))
 
 #    print("----------------PARAMETER NODES----------------")
-    for node, values in parameterNodes.items():
+    #for node, values in parameterNodes.items():
 #        #print(str(node) + ": " + str(values))
-        addNodeValues(node, values)
+        #addNodeValues(node, values)
 
     #print("----------------TO PROCESS----------------")
     #for node, value in toProcess.items():
@@ -274,6 +512,7 @@ def linkNodes(connections, nodes, material):
         child = nodes.get(connection["from"])
         if not child:
             continue
+
         parent = nodes.get(connection["to"])
         if not parent:
             continue
@@ -282,7 +521,11 @@ def linkNodes(connections, nodes, material):
         if not connector:
             continue
 
-        ix.cmds.SetTexture([str(parent) + "." + str(connector)], str(child))
+        if(isinstance(connector, list)):
+            for c in connector:
+                ix.cmds.SetTexture([str(parent) + "." + str(c)], str(child))
+        else:
+            ix.cmds.SetTexture([str(parent) + "." + str(connector)], str(child))
 
 
 
@@ -291,7 +534,7 @@ def linkNodes(connections, nodes, material):
 def attributeMaterials(selected, mat, objects):
     if not mat:
         return
-    print(mat)
+    #print(mat)
     for object in objects:
         ix.cmds.SetValues([str(selected) + "/" + str(object) + ".materials[0]"], [str(mat)])
 
@@ -341,79 +584,31 @@ def read_mat_data(file_path=None, default_path="project://scene"):
         connections = values["connections"]
         nodes = values["nodes"]
         objects = values["objects"]
+        nodeTree = NodeTree(material, nodes, connections, objects, selected)
+        nodeTrees.append(nodeTree)
+
+        nodeTree.createNodes()
+
+        #nodeTree.linkNodes(connections)
 
             #standard_mat = ix.cmds.CreateObject("pSphere1" + '_mat', "MaterialPhysicalStandard", "Global", default_path)
 
-        result = createNodes(nodes, default_path, material)
-        materialNodes = result[0]
-        toProcess = result[1]
-        mat = result[2]
+#        result = createNodes(nodes, default_path, material)
+#        materialNodes = result[0]
+#        toProcess = result[1]
+#        mat = result[2]
 
-        linkNodes(connections, materialNodes, material)
+        #linkNodes(connections, materialNodes, material)
 
-        attributeMaterials(selected, mat, objects)
+        #attributeMaterials(selected, mat, objects)
+
+
+
+
 #    if(selected):
 #        for j in range(selected.get_attribute_count()): # item.get_attribute_count() gives us the number of attributes for this item
 #            attr = selected.get_attribute(j) # This is our attribute, we get it like we could get it inside of a python list
 #            print("    "+str(attr))
-
-
-
-        #sphere = ix.cmds.CreateObject("sphere", "GeometrySphere")
-        #sphere.attrs.override_material = "project://scene/METAL_tx"
-
-    #ix.cmds.SetValue(str(sphere) + ".materials[0]", ["project://scene/CONCRETE_tx"])
-
-
-
-        #if value["type"] == "remapColor":
-        #   texture_node = ix.cmds.CreateObject(str(node) + "_tx", "TextureRemap", "Global", default_path)
-        #   ix.cmds.SetTexture([str(standard_mat) + ".diffuse_front_color"], str(texture_node))
-
-
-#    for shader in dataA:
-#        if shader:
-#            shader_name = shader['name']
-
-#            # Create Physical Material
-#            if shader_name:
-#                standard_mat = ix.cmds.CreateObject(str(shader_name) + '_mat', "MaterialPhysicalStandard", "Global",
-#                                                    default_path)
-
-#            # Get the attributes
-#            if standard_mat:
-#                attributes_data = shader.get('data')
-
-#                if attributes_data:
-#                    for i in attributes_data:
-#                        if i:
-
-#                            if isinstance(i, dict):
-#                                for clar_id, val in i.iteritems():
-
-#                                    if isinstance(val, list) and len(val) == 3:
-#                                        ix.cmds.SetValues([standard_mat.get_full_name() + "." + str(clar_id)],
-#                                                          [str(val[0]), str(val[1]), str(val[2])])
-
-#                                    # Everything that is a string is considered as a file path
-#                                    elif isinstance(val, basestring):
-#                                        texture_node = ix.cmds.CreateObject(str(ntpath.basename(val)) + "_tx",
-#                                                                            "TextureStreamedMapFile", "Global",
-#                                                                            default_path)
-
-#                                        if texture_node:
-#                                            ix.cmds.SetValues([texture_node.get_full_name() + ".filename[0]"],
-#                                                              [str(val)])
-
-#                                            # TODO Bump still needs to be implemented as an override
-
-#                                            ix.cmds.SetTexture([standard_mat.get_full_name() + "." + str(clar_id)],
-#                                                               texture_node.get_full_name())
-
-#                                    else:
-#                                        # Set the attribute
-#                                        ix.cmds.SetValues([standard_mat.get_full_name() + "." + str(clar_id)],
-#                                                          [str(val)])
 
 
 read_mat_data(file_path='C:\Users\etudiant\Documents\clarisse_alshader_io\\batiment.json', default_path="project://scene")
