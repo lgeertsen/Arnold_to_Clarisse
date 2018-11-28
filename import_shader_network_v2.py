@@ -36,8 +36,17 @@ class NodeTree(object):
                     #texture = "project://scene/" + str(material)
                 elif type:
                     #texture = createNode(node, type, default_path)
-                    n = Node(node, value["type"], type[1], value["data"])
-                    self.nodes[n.name] = n
+                    if(isinstance(type[1], dict)):
+                        if(type[1]["key"] in value["data"]):
+                            n = Node(node, value["type"], type[1][str(value["data"][type[1]["key"]])], value["data"])
+                            self.nodes[n.name] = n
+                        else:
+                            n = Node(node, value["type"], type[1]["default"], value["data"])
+                            self.nodes[n.name] = n
+                    else:
+                        n = Node(node, value["type"], type[1], value["data"])
+                        self.nodes[n.name] = n
+
                     #print(texture.name)
 
 #                if texture:
@@ -80,8 +89,8 @@ class NodeTree(object):
     def replaceTriplanars(self):
         for name, node in self.nodes.items():
             if(node.typeM == "aiTriplanar"):
-                print("Triplanar")
-                print(node.name)
+                #print("Triplanar")
+                #print(node.name)
                 files = []
                 for input in node.input:
                     for output in node.output:
@@ -90,20 +99,26 @@ class NodeTree(object):
 
                 node.output = []
                 files = self.getLinkedFiles(node.input)
+
+                index = 1
+
                 for file in files:
-                    print(file.output)
+                    #print(file.output)
                     doDuplicate = True
 
                     for output in file.output:
                         if output["to"].typeM == "aiTriplanar":
-                            print(output["to"].typeM)
+                            #print(output["to"].typeM)
                             doDuplicate = False
 
                     if not doDuplicate:
                         continue
 
                     duplicate = self.duplicateTriplanar(node)
+                    duplicate.name = duplicate.name + str(index)
+                    index += 1
                     duplicate.output = file.output
+                    duplicate.input.append(file)
                     connection = ["right", "left", "top", "bottom", "front", "back"]
                     file.output = [{"to": duplicate, "connection": connection}]
                     self.nodes[duplicate.name] = duplicate
@@ -113,7 +128,7 @@ class NodeTree(object):
                         for c in output["connection"]:
                             ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(duplicate.path))
 
-        self.addNodeValue()
+        self.addNodeValues()
 
 
     def getLinkedFiles(self, n):
@@ -134,35 +149,56 @@ class NodeTree(object):
         duplicate = Node(node.name, node.typeM, node.typeC, node.data)
         return duplicate
 
-    def addNodeValues(self, node, data):
+    def addNodeValues(self):
+        for name, node in self.nodes.items():
+            if(node.typeM == "remapHsv"):
+                ix.cmds.SetValues([str(node.path) + ".output_color_model"], ["1"])
+                continue
+            elif(node.typeM == "aiNoise"):
+                ix.cmds.SetValues([str(node.path) + ".color1"], ["0.0", "0.0", "0.0"])
+                ix.cmds.SetValues([str(node.path) + ".color2"], ["1", "1", "1"])
+
+            for parameter, value in node.data.items():
     #    print("----------------" + node + "ADD NODE VALUES----------------")
         #print(str(data["type"]) + ": " + str(data["data"]))
-        for parameter, value in data["data"].items():
+        #for parameter, value in data["data"].items():
     #        print(str(parameter) + ": " + str(value))
-            type = parameterSwitch.get(parameter)
+                type = parameterLibrary.get(parameter)
 
-            if not type:
-                continue
+                if not type:
+                    continue
 
-    #        if(isinstance(type, list) and isinstance(type[0], str)):
-    #            type[1](data, value, type[2])
-    #            continue
-            if(value["type"] == "string"):
-                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"])])
-                #ix.cmds.SetValues([str(data["type"]) + "." + str(type)], [str(value["value"])])
-                continue
-            if(value["type"] == "float"):
-                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"])])
-                continue
-            if(value["type"] == "float3"):
-                type[0]([str(data["type"]) + "." + str(type[1])], [str(value["value"][0][0]), str(value["value"][0][1]), str(value["value"][0][2])])
-                continue
-            if(value["type"] == "bool"):
-                if(value["value"]):
-                    type[0]([str(data["type"]) + "." + str(type[1])], ["1"])
-                continue
-            if(value["type"] == "TdataCompound"):
-                type(data["type"], value["value"])
+        #        if(isinstance(type, list) and isinstance(type[0], str)):
+        #            type[1](data, value, type[2])
+        #            continue
+                if(isinstance(type, dict)):
+                    if(node.typeM == "aiTriplanar" and value["type"] == "float3"):
+                        type["aiTriplanar"](node, value["value"])
+                        continue
+                    if(node.typeM == "aiNoise"):
+                        type["aiNoise"][0]([str(node.path) + "." + str(type["aiNoise"][1])], [str(value["value"][0][0]), str(value["value"][0][1]), str(value["value"][0][2])])
+                        continue
+                elif(isinstance(type, list)):
+                    if(value["type"] == "string"):
+                        type[0]([str(node.path) + "." + str(type[1])], [str(value["value"])])
+                        #ix.cmds.SetValues([str(data["type"]) + "." + str(type)], [str(value["value"])])
+                        continue
+                    elif(value["type"] == "float" or value["type"] == "long"):
+                        type[0]([str(node.path) + "." + str(type[1])], [str(value["value"])])
+                        continue
+                    elif(value["type"] == "float3" and parameter != "scale"):
+                        type[0]([str(node.path) + "." + str(type[1])], [str(value["value"][0][0]), str(value["value"][0][1]), str(value["value"][0][2])])
+                        continue
+                    elif(value["type"] == "bool"):
+                        if(value["value"]):
+                            type[0]([str(node.path) + "." + str(type[1])], ["1"])
+                        continue
+                elif(value["type"] == "TdataCompound" and node.typeC == "TextureRemap"):
+                    type(node.path, value["value"])
+                    continue
+                elif(value["type"] == "string" or value["type"] == "float"):
+                    type(node, value["value"])
+
 
         self.attributeMaterials()
 
@@ -171,7 +207,7 @@ class NodeTree(object):
             return
         #print(mat)
         for object in self.jsonObjects:
-            print self.material
+            #print self.material
             ix.cmds.SetValues([str(self.object) + "/" + str(object) + ".materials[0]"], [str(self.material.path)])
 
 
@@ -210,7 +246,7 @@ class Node(MaterialNode):
 
 
     def createNode(self):
-        node = ix.cmds.CreateObject(str(self.name) + "_tx", str(self.typeC), "Global", path)
+        node = ix.cmds.CreateObject(str(self.name), str(self.typeC), "Global", path)
         return node
 
 
@@ -299,20 +335,38 @@ def addAllCurves(node, data):
 #    print(node)
 #    print(data)
 #    print(str(node) + ".output")
-    ix.cmds.RemoveCurveValue([str(node) + ".output"], [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2])
-    for point in data:
-#        print(point)
-        ix.cmds.AddCurveValue([str(node) + ".output"], [
-                1.0,
-                0.0, point[0], point[1],
-                1.0,
-                0.0, point[0], point[1],
-                1.0,
-                0.0, point[0], point[1],
-                1.0,
-                0.0, point[0], point[1],
-            ])
+    try:
+        ix.cmds.RemoveCurveValue([str(node) + ".output"], [2, 1, 2, 2, 1, 2, 2, 1, 2, 2, 1, 2])
+        for point in data:
+    #        print(point)
+            ix.cmds.AddCurveValue([str(node) + ".output"], [
+                    1.0,
+                    0.0, point[0], point[1],
+                    1.0,
+                    0.0, point[0], point[1],
+                    1.0,
+                    0.0, point[0], point[1],
+                    1.0,
+                    0.0, point[0], point[1],
+                ])
+    except:
+        pass
 
+def triplanarScaleToFile(node, data):
+    #print("triplanarScaleToFile")
+    #print(node.path)
+    if node.input:
+
+        #print(node.input[0].path)
+        #print(data)
+        ix.cmds.SetValues([str(node.input[0].path) + ".uv_scale"], [str(data[0][0]), str(data[0][1]), str(data[0][2])])
+
+def setFileColorSpace(node, data):
+    if(data == "Raw"):
+        ix.cmds.SetValues([str(node.path) + ".use_raw_data"], ["1"])
+
+def setFrequency(node, data):
+    ix.cmds.SetValues([str(node.path) + ".frequency"], [str(data / 100)])
 
 
 
@@ -320,9 +374,9 @@ nodeLibrary = {
     "aiStandardSurface"     : ["Material", "MaterialPhysicalStandard"],
     "remapColor"            : ["Node", "TextureRemap"],
     "file"                  : ["Node", "TextureMapFile"],
-    "bump2d"                : ["Node", "TextureNormalMap"],
+    "bump2d"                : ["Node", {"key": "bumpInterp", "1": "TextureNormalMap", "default": "TextureBumpMap"}],
     "reverse"               : ["Node", "TextureInvert"],
-    "remapValue"            : ["Node", "TextureRescale"],
+    "remapValue"            : ["Node", "TextureRemap"],
     "aiTriplanar"           : ["Node", "TextureTriplanar"],
     "blendColors"           : ["Node", "TextureBlend"],
     "remapHsv"              : ["Node", "TextureColorModel"],
@@ -349,12 +403,18 @@ parameterLibrary = {
     "red": addCurveRed,
     "green": addCurveGreen,
     "blue": addCurveBlue,
+    "value": addAllCurves,
     "specularColor": [ix.cmds.SetValues, "specular_1_color"],
     "specularRoughness": [ix.cmds.SetValues, "specular_1_roughness"],
     "specularIOR": [ix.cmds.SetValues, "specular_1_index_of_refraction"],
     "baseColor": [ix.cmds.SetValues, "diffuse_front_color"],
     "base": [ix.cmds.SetValues, "diffuse_front_strength"],
-    "alphaIsLuminance": [ix.cmds.SetValues, "single_channel_file_behavior"]
+    "alphaIsLuminance": [ix.cmds.SetValues, "single_channel_file_behavior"],
+    "scale": {"aiTriplanar": triplanarScaleToFile, "aiNoise": [ix.cmds.SetValues, "uv_scale"]},
+    "octaves": [ix.cmds.SetValues, "octaves"],
+    "lacunarity": [ix.cmds.SetValues, "lacunarity"],
+    "colorSpace": setFileColorSpace,
+    "frequency": setFrequency
 }
 
 

@@ -28,7 +28,8 @@ def testButton(objects, *args):
                         isInterruptable=True )
     exporting = True
     #shaders_to_json(objA=objects, file_path=path[0])
-    shaders_to_json(objA=['BATIMENT_PAUVRE_01'], file_path=path[0])
+    #shaders_to_json(objA=['BATIMENT_PAUVRE_01'], file_path=path[0])
+    shaders_to_json(objA=['pSphere1'], file_path=path[0])
     # while exporting:
     #     if cmds.progressWindow( query=True, isCancelled=True ) :
     #         exporting = False
@@ -74,6 +75,7 @@ def getAllNodes(nodes, shaderNetwork):
                     # print("__________________________________")
                     # print(cmds.getAttr(n + "." + a, type=True))
                     # print("__________________________________")
+
                     try:
                         type = cmds.getAttr(n + "." + a, type=True)
                         if type != "TdataCompound":
@@ -116,6 +118,8 @@ def getAllNodes(nodes, shaderNetwork):
                                 shaderNetwork["nodes"][n]["data"][a]["type"] = "TdataCompound"
                     except:
                         pass
+
+
                 cmds.delete(tempNode)
 
 
@@ -200,7 +204,7 @@ def shaders_to_json(objA=None, file_path=None):
                 for shader in shaderGroups:
                     type = cmds.objectType(shader)
                     if(type == "shadingEngine"):
-                        print(eachChild)
+                        #print(eachChild)
                         if(shader not in treatedShaders):
                             shaders = []
                             print(shader)
