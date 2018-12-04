@@ -43,6 +43,17 @@ class NodeTree(object):
                         else:
                             n = Node(node, value["type"], type[1]["default"], value["data"])
                             self.nodes[n.name] = n
+                    elif(isinstance(type[1], list)):
+                        index = 0
+                        for texture in type[1]:
+                            if(index == 0):
+                                n = Node(node, value["type"], texture, value["data"])
+                                self.nodes[n.name] = n
+                                index += 1
+                            else:
+                                n = Node(str(node) + "_" + str(index), value["type"], texture, value["data"])
+                                self.nodes[n.name] = n
+                                index += 1
                     else:
                         n = Node(node, value["type"], type[1], value["data"])
                         self.nodes[n.name] = n
@@ -75,15 +86,49 @@ class NodeTree(object):
             if not connector:
                 continue
 
-            parent.input.append(child)
-            child.output.append({"to": parent, "connection": connector})
+            if(child.typeM == "remapHsv"):
+                saturation = self.nodes.get(child.name + "_1")
+                multiply = self.nodes.get(child.name + "_2")
+                ix.cmds.SetTexture([str(saturation.path) + ".input"], str(child.path))
+                ix.cmds.SetTexture([str(multiply.path) + ".input1"], str(saturation.path))
+                saturation.input.append({"from": child, "connection": connector})
+                multiply.input.append({"from": saturation, "connection": connector})
+                child.output.append({"to": saturation, "connection": ["input"]})
+                saturation.output.append({"to": multiply, "connection": ["input"]})
+                parent.input.append({"from": multiply, "connection": connector})
+                multiply.output.append({"to": parent, "connection": connector})
+                for c in connector:
+                    ix.cmds.SetTexture([str(parent.path) + "." + str(c)], str(multiply.path))
+            elif(child.typeM == "aiColorCorrect"):
+                saturation = self.nodes.get(child.name + "_1")
+                contrast = self.nodes.get(child.name + "_2")
+                power = self.nodes.get(child.name + "_3")
+                ix.cmds.SetTexture([str(saturation.path) + ".input"], str(child.path))
+                ix.cmds.SetTexture([str(contrast.path) + ".input"], str(saturation.path))
+                ix.cmds.SetTexture([str(power.path) + ".input"], str(contrast.path))
+                saturation.input.append({"from": child, "connection": connector})
+                contrast.input.append({"from": saturation, "connection": connector})
+                power.input.append({"from": contrast, "connection": connector})
+                child.output.append({"to": saturation, "connection": ["input"]})
+                saturation.output.append({"to": contrast, "connection": ["input"]})
+                contrast.output.append({"to": power, "connection": ["input"]})
+                parent.input.append({"from": power, "connection": connector})
+                power.output.append({"to": parent, "connection": connector})
+                for c in connector:
+                    ix.cmds.SetTexture([str(parent.path) + "." + str(c)], str(power.path))
+            else:
+                parent.input.append({"from": child, "connection": connector})
+                child.output.append({"to": parent, "connection": connector})
 
-            #if(isinstance(connector, list)):
-            for c in connector:
-                ix.cmds.SetTexture([str(parent.path) + "." + str(c)], str(child.path))
-            #else:
-                #ix.cmds.SetTexture([str(parent) + "." + str(connector)], str(child))
+                #if(isinstance(connector, list)):
+                for c in connector:
+                    ix.cmds.SetTexture([str(parent.path) + "." + str(c)], str(child.path))
+                #else:
+                    #ix.cmds.SetTexture([str(parent) + "." + str(connector)], str(child))
+
+
         self.replaceTriplanars()
+        #self.addNodeValues()
 
 
     def replaceTriplanars(self):
@@ -93,9 +138,10 @@ class NodeTree(object):
                 #print(node.name)
                 files = []
                 for input in node.input:
+                    input["from"].output = node.output
                     for output in node.output:
                         for c in output["connection"]:
-                            ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(input.path))
+                            ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(input["from"].path))
 
                 node.output = []
                 files = self.getLinkedFiles(node.input)
@@ -118,8 +164,8 @@ class NodeTree(object):
                     duplicate.name = duplicate.name + str(index)
                     index += 1
                     duplicate.output = file.output
-                    duplicate.input.append(file)
                     connection = ["right", "left", "top", "bottom", "front", "back"]
+                    duplicate.input.append({"from": file, "connection": connection})
                     file.output = [{"to": duplicate, "connection": connection}]
                     self.nodes[duplicate.name] = duplicate
                     for c in connection:
@@ -138,7 +184,8 @@ class NodeTree(object):
         nodes = n
         files = []
         while nodes:
-            node = nodes.pop(0)
+            input = nodes.pop(0)
+            node = input["from"]
             if(node.typeM == "file" or node.typeM == "aiNoise" or node.typeM == "noise"):
                 files.append(node)
             if node.input:
@@ -151,8 +198,11 @@ class NodeTree(object):
 
     def addNodeValues(self):
         for name, node in self.nodes.items():
-            if(node.typeM == "remapHsv"):
-                ix.cmds.SetValues([str(node.path) + ".output_color_model"], ["1"])
+            if(node.typeM == "aiComposite"):
+                self.setAiComposite(node)
+            elif(node.typeM == "remapHsv"):
+                pass
+                #ix.cmds.SetValues([str(node.path) + ".output_color_model"], ["1"])
                 continue
             elif(node.typeM == "aiNoise"):
                 ix.cmds.SetValues([str(node.path) + ".color1"], ["0.0", "0.0", "0.0"])
@@ -173,11 +223,14 @@ class NodeTree(object):
         #            continue
                 if(isinstance(type, dict)):
                     if(node.typeM == "aiTriplanar" and value["type"] == "float3"):
+                        #pass
                         type["aiTriplanar"](node, value["value"])
                         continue
-                    if(node.typeM == "aiNoise"):
+                    elif(node.typeM == "aiNoise"):
                         type["aiNoise"][0]([str(node.path) + "." + str(type["aiNoise"][1])], [str(value["value"][0][0]), str(value["value"][0][1]), str(value["value"][0][2])])
                         continue
+                    elif(node.typeM in type):
+                        type[node.typeM](node, value["value"])
                 elif(isinstance(type, list)):
                     if(value["type"] == "string"):
                         type[0]([str(node.path) + "." + str(type[1])], [str(value["value"])])
@@ -196,11 +249,41 @@ class NodeTree(object):
                 elif(value["type"] == "TdataCompound" and node.typeC == "TextureRemap"):
                     type(node.path, value["value"])
                     continue
-                elif(value["type"] == "string" or value["type"] == "float"):
+                elif(value["type"] == "string" or value["type"] == "float" or value["type"] == "float3"):
                     type(node, value["value"])
 
 
         self.attributeMaterials()
+
+    def setAiComposite(self, node):
+        operation = node.data.get("operation")
+        if(operation["value"] == 17):
+            minimum = Node(node.name + "_minimum", node.typeM, "TextureMinimum", node.data)
+            minimum.input = node.input
+            minimum.output = node.output
+            for input in node.input:
+                ix.cmds.SetTexture([str(minimum.path) + "." + str(input["connection"][0])], str(input["from"].path))
+            for output in node.output:
+                for c in output["connection"]:
+                    ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(minimum.path))
+        elif(operation["value"] == 18):
+            substract = Node(node.name + "_substract", node.typeM, "TextureSubtract", node.data)
+            substract.input = node.input
+            substract.output = node.output
+            for input in node.input:
+                ix.cmds.SetTexture([str(substract.path) + "." + str(input["connection"][0])], str(input["from"].path))
+            for output in node.output:
+                for c in output["connection"]:
+                    ix.cmds.SetTexture([str(output["to"].path) + "." + str(c)], str(substract.path))
+        elif(operation["value"] == 27):
+            ix.cmds.SetValues([str(node.path) + ".mode"], ["10"])
+            for input in node.input:
+                if(input["connection"][0] == "input1"):
+                    input["connection"][0] = "input2"
+                elif(input["connection"][0] == "input2"):
+                    input["connection"][0] = "input1"
+            for input in node.input:
+                ix.cmds.SetTexture([str(node.path) + "." + str(input["connection"][0])], str(input["from"].path))
 
     def attributeMaterials(self):
         if not self.material:
@@ -359,7 +442,7 @@ def triplanarScaleToFile(node, data):
 
         #print(node.input[0].path)
         #print(data)
-        ix.cmds.SetValues([str(node.input[0].path) + ".uv_scale"], [str(data[0][0]), str(data[0][1]), str(data[0][2])])
+        ix.cmds.SetValues([str(node.input[0]["from"].path) + ".uv_scale"], [str(data[0][0]), str(data[0][1]), str(data[0][2])])
 
 def setFileColorSpace(node, data):
     if(data == "Raw"):
@@ -368,6 +451,28 @@ def setFileColorSpace(node, data):
 def setFrequency(node, data):
     ix.cmds.SetValues([str(node.path) + ".frequency"], [str(data / 100)])
 
+def setColor(node, data):
+     ix.cmds.SetValues([str(node.path) + ".color"], [str(data[0][0]), str(data[0][1]), str(data[0][2]), "1"])
+
+def setFarClip(node, data):
+    ix.cmds.SetValues([str(node.path) + ".radius"], [str(data / 100)])
+
+def setSpread(node, data):
+    ix.cmds.SetValues([str(node.path) + ".angle"], [str(data * 180)])
+
+def setExposure(node, data):
+    if(node.typeC == "TexturePower"):
+        ix.cmds.SetValues([str(node.path) + ".color"], [str(data)])
+
+def setSaturation(node, data):
+    if(node.typeC == "TextureSaturation"):
+        ix.cmds.SetValues([str(node.path) + ".saturation"], [str(data - 1)])
+
+def setOutMin(node, data):
+    ix.cmds.SetValues([str(node.path) + ".output_min"], [str(data)])
+
+def setOutMax(node, data):
+    ix.cmds.SetValues([str(node.path) + ".output_max"], [str(data)])
 
 
 nodeLibrary = {
@@ -379,9 +484,14 @@ nodeLibrary = {
     "remapValue"            : ["Node", "TextureRemap"],
     "aiTriplanar"           : ["Node", "TextureTriplanar"],
     "blendColors"           : ["Node", "TextureBlend"],
-    "remapHsv"              : ["Node", "TextureColorModel"],
+    "remapHsv"              : ["Node", ["TextureHue", "TextureSaturation", "TextureMultiply"]],
     "aiNoise"               : ["Node", "TextureFractalNoise"],
-    "noise"                 : ["Node", "TexturePerlinNoise"]
+    "noise"                 : ["Node", "TexturePerlinNoise"],
+    "colorConstant"         : ["Node", "TextureConstantColor"],
+    "aiAmbientOcclusion"    : ["Node", "TextureOcclusion"],
+    "aiComposite"           : ["Node", "TextureBlend"],
+    "aiColorCorrect"        : ["Node", ["TextureHue", "TextureSaturation", "TextureContrast", "TexturePower"]],
+    "aiRange"               : ["Node", "TextureRescale"],
 }
 
 connectionLibrary = {
@@ -394,27 +504,52 @@ connectionLibrary = {
     "inputValue"            : ["input"],
     "inputR"                : ["right", "left", "top", "bottom", "front", "back"],
     "color1"                : ["input1"],
+    "color1R"               : ["input1"],
+    "color1G"               : ["input1"],
+    "color1B"               : ["input1"],
     "color2"                : ["input2"],
-    "blender"               : ["mix"]
+    "color2R"               : ["input2"],
+    "color2G"               : ["input2"],
+    "color2B"               : ["input2"],
+    "blender"               : ["mix"],
+    "black"                 : ["occlusion_color"],
+    "A"                     : ["input1"],
+    "AR"                    : ["input1"],
+    "AG"                    : ["input1"],
+    "AB"                    : ["input1"],
+    "B"                     : ["input2"],
+    "BR"                    : ["input2"],
+    "BG"                    : ["input2"],
+    "BB"                    : ["input2"],
+    "input"                 : ["input"],
+    "inputMin"              : ["input_min"]
 }
 
 parameterLibrary = {
-    "fileTextureName": [ix.cmds.SetValues, "filename[0]"],
-    "red": addCurveRed,
-    "green": addCurveGreen,
-    "blue": addCurveBlue,
-    "value": addAllCurves,
-    "specularColor": [ix.cmds.SetValues, "specular_1_color"],
-    "specularRoughness": [ix.cmds.SetValues, "specular_1_roughness"],
-    "specularIOR": [ix.cmds.SetValues, "specular_1_index_of_refraction"],
-    "baseColor": [ix.cmds.SetValues, "diffuse_front_color"],
-    "base": [ix.cmds.SetValues, "diffuse_front_strength"],
-    "alphaIsLuminance": [ix.cmds.SetValues, "single_channel_file_behavior"],
-    "scale": {"aiTriplanar": triplanarScaleToFile, "aiNoise": [ix.cmds.SetValues, "uv_scale"]},
-    "octaves": [ix.cmds.SetValues, "octaves"],
-    "lacunarity": [ix.cmds.SetValues, "lacunarity"],
-    "colorSpace": setFileColorSpace,
-    "frequency": setFrequency
+    "fileTextureName"       : [ix.cmds.SetValues, "filename[0]"],
+    "red"                   : addCurveRed,
+    "green"                 : addCurveGreen,
+    "blue"                  : addCurveBlue,
+    "value"                 : addAllCurves,
+    "specularColor"         : [ix.cmds.SetValues, "specular_1_color"],
+    "specularRoughness"     : [ix.cmds.SetValues, "specular_1_roughness"],
+    "specularIOR"           : [ix.cmds.SetValues, "specular_1_index_of_refraction"],
+    "baseColor"             : [ix.cmds.SetValues, "diffuse_front_color"],
+    "base"                  : [ix.cmds.SetValues, "diffuse_front_strength"],
+    "alphaIsLuminance"      : [ix.cmds.SetValues, "single_channel_file_behavior"],
+    "scale"                 : {"aiTriplanar": triplanarScaleToFile, "aiNoise": [ix.cmds.SetValues, "uv_scale"]},
+    "octaves"               : [ix.cmds.SetValues, "octaves"],
+    "lacunarity"            : [ix.cmds.SetValues, "lacunarity"],
+    "colorSpace"            : setFileColorSpace,
+    "frequency"             : setFrequency,
+    "inColor"               : setColor,
+    "farClip"               : setFarClip,
+    "samples"               : [ix.cmds.SetValues, "quality"],
+    "spread"                : setSpread,
+    "exposure"              : {"aiColorCorrect": setExposure},
+    "saturation"            : {"aiColorCorrect": setSaturation},
+    "outputMin"             : setOutMin,
+    "outputMax"             : setOutMax
 }
 
 
